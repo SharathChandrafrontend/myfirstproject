@@ -1,0 +1,66 @@
+<html>
+    <head> <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous">
+    </script>
+    <style>
+        #apiList{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #apiList li{
+            width: 200px;
+            list-style: none;
+            padding: 10px;
+            border: 1px solid;
+        }
+        #apiList imgi{
+            width: 200px;
+            display: block;
+        }
+    </style>
+
+    </head>
+        <body>
+            <button onclick="getDetails()">
+                get the details
+            </button>
+            <input type="search" id="searchid">
+            <ul id="api_List">
+
+            </ul>
+            <script>
+
+               
+                    $.get('https://restcountries.com/v3/all',function(countries,i){
+
+                        countries.forEach(function(county){
+                            
+                            var newli = document.createElement('li')
+                           
+                            newli.innerHTML = county.name.common
+                             var flg = document.createElement('img')
+                            flg.src = county.flags.png 
+                           newli.appendChild(flg)
+
+                            var y = document.getElementById('api_List').appendChild(newli)
+
+                            var searchinp = document.getElementById('searchid')
+                            searchinp.innerHTML = county.value
+                            
+                            countries.filter(function(val){
+                                if(val.name.common === searchinp){
+                                    console.log(val )
+                                }
+
+                            })
+
+                        })
+                        
+                    })
+                    
+
+
+
+            </script>
+        </body>
+    
+</html>

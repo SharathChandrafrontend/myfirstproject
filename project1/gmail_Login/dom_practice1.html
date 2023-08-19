@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <body>
+           
+
+            <input type="text" id="dd">
+            <input type="text" id="dd1">
+            <input type="text" id="dd2">
+            <button onclick="adddetails()">Add</button>
+            <div id="dd3" >
+               <ul id="dd4">
+
+               </ul>
+        </div>
+            <script>
+                function adddetails(){
+                var a = document.getElementById('dd');
+              
+                var b = document.getElementById('dd1');
+                
+                var c = document.getElementById('dd2');
+                var d = document.getElementById('dd3');
+                var e = document.getElementById('dd4');
+               
+                var array = []
+                var obj1 = { name: " ",
+                                age:" ",
+                                city:" ",
+                            }
+
+                    obj1.name = a.value;
+                    obj1.age = b.value;
+                    obj1.city = c.value;
+                    array.push(obj1)
+
+                    console.log(array)
+          
+                    genUi()
+                    e.innerHTML =''
+               
+
+                    }
+
+              
+            function genUi(task){ 
+                 task.forEach(function(value){
+                    console.log(task)
+                    var x = document.createElement('li')     
+                   
+                   x.innerHTML =value.name;
+                   x.innerHTML = value.age;
+                   x.innerHTML= value.city;
+                   console.log(arr)
+                     e.appendChild(x);
+                     e.appendChild(x);
+                     e.appendChild(x); 
+                    })
+            }
+
+
+
+            </script>
+
+        </body>
+</head>
+</html>

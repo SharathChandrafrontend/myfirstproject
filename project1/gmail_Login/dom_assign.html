@@ -1,0 +1,76 @@
+<html>
+    <br>
+        <br>
+
+            <button onclick="adddetails()" id="dd1"></button>
+            
+            <button onclick="likecount()" id="dd2">Like</button>
+            <p id="p1">0</p>
+            </br>
+            <button onclick="dislikes()" id="dd3">Dislike</button>
+            <p id="p2">0</p>
+         
+
+            
+            
+            <script>
+                var count = 0
+                function likecount(){
+                    var a = document.getElementById('p1')
+                    a.innerHTML = a + count
+                    count++
+                    document.body.appendChild(a)
+                }
+
+                var count1 = 0
+                function dislikes(){
+                    var b = document.getElementById('p2')
+                    b.innerHTML =b       + count1
+                    count1++
+                    document.body.appendChild(b)
+                }
+
+                
+
+
+               /* var z = document.getElementById('dd2');
+
+                function adddetails(){
+                   
+                   z.innerHTML = 'true'
+                   document.body.appendChild(z)
+               }
+
+                function adddetails(){
+                    var x = document.getElementById('dd');
+                    var y = document.getElementById('dd1');
+                    
+                    x.innerHTML = 'Welcome to the World'
+                    z.innerHTML = 'false'
+                  
+                    y.style.backgroundColor = 'green'
+                    document.body.appendChild(y)
+                    document.body.appendChild(z)
+
+                }
+                
+                 
+                var b = document.getElementById('dd1')
+                function adddetails(){
+                    b.innerHTML = 'On'
+                    document.body.appendChild(b)
+                }
+                var c = document.getElementById('dd1')
+                function adddetails(){
+                    c.innerHTML = 'Off'
+                    document.body.appendChild(c)
+                }
+                */
+
+
+
+
+            </script>
+        </body>
+    </head>
+</html>

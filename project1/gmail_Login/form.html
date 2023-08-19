@@ -1,0 +1,93 @@
+<html>
+<head>
+<body>
+    <h1>Practicing Javsscript_form</h1>
+<br name="sharathform" onsubmit="event.preventDefault()">
+
+<input  name="firstname" type="text"  onkeyup="updatefirstname(event)" >
+<br>
+<input  name="lastname" type="text"  onkeyup="updateLastname(event)" >
+<br>
+<input  name="dob"   type="date"  onchange="updatedob(event)" >
+<br>
+<select  onchange="updatecountry(event)">
+ 
+<option  disabled selected>Select Country  </option>
+<option value="">India</option>
+<option>USA</option>
+<option>Russia</option>
+<option>UK</option>
+</select>
+</br>
+<input  name="gen"   type="radio" value="f" onchange="updategender(event)" >:Female
+<input  name="gen"   type="radio"  value="m" onchange="updategender(event)" >:Male
+<input  name="gen"   type="radio"  value="o" onchange="updategender(event)" >:Others
+<br>
+<input  name="checbox"   type="checkbox" value="ReactJs" onchange="updateTechs(event)" >:ReactJs
+<input  name="checbox"   type="checkbox"  value="AngularJs" onchange="updateTechs(event)" >:AngularJs
+<input  name="checbox"   type="checkbox"  value="VueJs" onchange="uupdateTechs(event)" >:VueJs
+<br>
+<button onclick="abc()" id="btn">submit</button>
+
+</form>
+
+
+<script>
+  var values = {firstname: "",
+                lastname:"",
+                age:"",
+            dob:"",
+        gender:"",
+    techs:[],
+select:""}
+
+function updatecountry(e){
+    values.select =e.target.value;
+}
+    
+ 
+
+
+ function updateTechs(e){
+    if(e.target.checked){
+    values.techs.push(e.target.value)}
+    else{
+     var  i= values.techs.indexOf(e.target.value)
+          values.techs.splice(i,1)
+    }
+
+ }       
+
+function updategender(e){
+    console.log(e)
+   values.gender= e.target.value
+}
+
+function updatefirstname(e) {
+    if (e.firstname === "") {
+        values.firstname= e.target.value
+    }
+      
+
+
+}
+
+function updateLastname(e){
+    values.lastname = e.target.value
+}
+function updatedob(e){
+    values.dob = e.target.value
+}
+
+function abc(){
+ console.log(values)
+}
+
+
+
+
+</script>
+
+</body>
+</head>
+</html>

@@ -1,0 +1,79 @@
+<html>
+    <head><script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <style>
+        #dd tr img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    </head>
+    <body>
+        <button onclick="getdetails()">Add</button>
+        <table border="2px" >
+            <thead>
+              
+                <th>title</th>
+                <th>discription</th>
+                <th>price</th>
+                <th>Image</th>
+            </thead>
+            
+            
+            
+            <tbody id="dd">
+                
+
+            </tbody>
+
+        </table>
+        
+        <script>
+
+           function getdetails(){
+           
+           axios.get('https://fakestoreapi.com/products')
+           .then(function (res){
+            
+            data=res.data
+            console.log(data)
+
+            data.forEach( (a)=>{
+
+            
+            var x = document.getElementById('dd')
+
+            var trow = document.createElement('tr')
+
+            var td = document.createElement('td')
+            var td1 = document.createElement('td')
+            var td2 = document.createElement('td')
+            var td3 = document.createElement('img')
+            
+            
+            
+            
+            td1.innerHTML = a.title
+            td.innerHTML = a.description
+            td2.innerHTML = a.price
+            td3.src = a.image
+
+            console.log(td1)
+
+           
+            trow.appendChild(td1)
+            trow.appendChild(td)
+            trow.appendChild(td2)
+            trow.append(td3)
+            x.appendChild(trow)
+            x.appendChild(trow)
+            x.appendChild(trow)
+            x.appendChild(trow)
+          }) 
+        }) 
+       
+    }
+   
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript For In Loop</h2>
+<p>The for in statement loops through the properties of an object:</p>
+<input type="search" onkeyup="search()" id="searchId"/>
+<p id="demo"></p>
+
+<script>
+const contacts = [{
+        name: "Sharath",
+        fulname: "Sharath Chandra",
+        age: 29,
+        graduated: true,
+        salary: 90000
+    },
+    {
+        name: "Raj",
+        fulname: "RajKumar",
+        age: 29,
+        graduated: true,
+        salary: 100000
+    },
+    {
+        name: "Harish",
+        fulname: "Harish Kumar",
+        age: 29,
+        graduated: true,
+        salary: 80000
+    },
+    {
+        name: "Vinay",
+        fulname: "Vinay singh",
+        age: 29,
+        graduated: true,
+        salary: 99000
+
+    },
+    {
+        name: "Sharath",
+        fulname: "Sharath Chandra",
+        age: 29,
+        graduated: true,
+        salary: 90000
+
+    },
+    {
+        name: "kumar",
+        fulname: "kumar",
+        age: 29,
+        graduated: true,
+        salary: 91000
+
+    },
+
+
+]
+function search(){
+let inputValue = document.getElementById("searchId")
+let InputValue1 = inputValue.value
+
+for(item in contacts){
+    const filterdata = " "
+    
+    const filtered = item.name.toLowercase().filter().includes(InputValue1.toLowercase())
+    contacts.push()=filtered
+    console.log(filtered)
+}
+
+}
+
+</script>
+
+</body>
+</html>

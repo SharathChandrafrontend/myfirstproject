@@ -1,0 +1,172 @@
+<script>
+//practicing the assaingments of iteration concepts ---
+
+/*function sum(a,b,abc) {
+    console.log(a) 
+    console.log(b) 
+    
+}
+
+function abc() {
+    console.log("hello")
+}
+
+sum(10,20)
+
+
+var ar =[10,12,25,32]
+function printarray(array){
+    console.log(array[0])
+}
+
+function printname(str,printarray) {
+
+    console.log(str);
+   
+}
+
+printname("This is Sharath",printarray)
+
+
+
+    
+for(var i=1;i<=ar.length;i++){
+     console.log(ar[i])
+
+}
+
+ar.forEach(function(b,i){
+    console.log(b[i])
+})
+
+var sum = 0
+ar.forEach(function (a,i,array){
+    if (a%2===0) {
+       console.log(a)
+   }
+   sum = sum +a 
+
+})
+
+console.log(sum)
+
+*/
+// map method---
+
+var ar =[1,2,3,4,5,6]
+
+var x = ar.map(function(value,index,array){
+    if (value%2===0) {
+        return value
+    }
+   
+})
+console.log(ar)
+console.log(x)
+
+var y = ar.filter(function (value,index,array) {
+    if (value%2===0) {
+        return value
+    }
+    
+})
+
+console.log(y)
+
+myar =["sharath",'raj','harish','raj','vinay']
+
+var z = myar.filter(function(a){
+        if(a === 'vinay')
+        return a    
+})
+
+console.log(z)
+
+var zx = ar.reduce(function(accumulator,value,index,array){
+    return accumulator - value //acc is intial value 50, value is 1
+})
+console.log(zx) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>

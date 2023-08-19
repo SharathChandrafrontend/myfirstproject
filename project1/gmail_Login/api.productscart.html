@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <style>
+            #div {
+                border :"solid"
+            }
+            #div img {
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="Getdetails()">Get the Product Deatils</button>
+        <div id="div" class="d-flex flex-colum justify-content-center">
+
+        </div>
+        <script>
+            function Getdetails(){
+                axios.get("https://fakestoreapi.com/products").then( (res)=>{
+                    console.log(res)
+
+                    var data = res.data
+
+                    data.forEach( (val)=>{
+
+                        //console.log(val.title)
+                        var appdiv = document.getElementById('div');
+                        var image = document.createElement('img')
+                        image.src = val.image
+                        appdiv.appendChild(image)
+
+                        var appdiv1 = document.createElement('div');
+                        var titleh5 = document.createElement('h5');
+                        var desp = document.createElement('p');
+                        var pricep = document.createElement('p');
+                        var categoryp = document.createElement('p');
+
+                        titleh5.innerHTML = val.title
+                        desp.innerHTML = val.description
+                        pricep.innerHTML = val.price
+                        categoryp.innerHTML = val.category
+
+                        appdiv1.appendChild(categoryp)
+                        appdiv1.appendChild(titleh5)
+                        appdiv1.appendChild(desp)
+                        appdiv1.appendChild(pricep)
+                        
+
+                        appdiv.appendChild(appdiv1)
+
+                    })
+
+
+                } )
+
+
+                    
+                    
+                
+
+
+            }
+
+
+
+        </script>
+    </body>
+</html>

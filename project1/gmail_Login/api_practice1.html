@@ -1,0 +1,110 @@
+<html>
+    <head>
+    </head>
+        <body>
+            <input type="search" id="inpele">
+            <button onclick="submit()">Search contacts</button>
+            <link rel="stylesheet" href="api_css.css">
+            <div id="searchlist"    >
+            <ul id='searchname'>
+
+            </ul>
+        </div>
+            <script>
+        const contacts = [{
+        name: "Sharath",
+        fulname: "Sharath Chandra",
+        contact: 9701831262,
+        graduated: true,
+        salary: 90000
+    },
+    {
+        name: "Raj",
+        fulname: "RajKumar",
+        contact: 9701757871,
+        graduated: true,
+        salary: 100000
+    },
+    {
+        name: "Harish",
+        fulname: "Harish Kumar",
+        contact: 9704402323,
+        graduated: true,
+        salary: 80000
+    },
+    {
+        name: "Vinay",
+        fulname: "Vinay singh",
+        contact: 9491646163,
+        graduated: true,
+        salary: 99000
+
+    },
+    {
+        name: "Sharath",
+        fulname: "Sharath Chandra",
+        contact: 9701831262,
+        graduated: true,
+        salary: 90000
+
+    },
+    {
+        name: "kumar",
+        fulname: "kumar",
+        age: 29,
+        graduated: true,
+        salary: 91000
+
+    },
+
+
+]
+
+                function submit(){
+                    
+                   contacts.forEach(function(a){
+                   
+
+                    var inpget = document.getElementById('inpele');
+                    var divSea = document.getElementById('searchlist');
+                    var ulSea = document.getElementById('searchname')
+
+                    var searchli = document.createElement('li')
+                    var searchp = document.createElement('p')
+                    searchli.innerHTML = a.name;
+                    searchp.innerHTML = a.fulname;
+                      searchli.innerHTML = a.contact; 
+                      console.log(a.name)
+
+                      
+                    
+                    var filterdData = contacts.filter(function(task){
+                        ulSea.appendChild(searchp)
+                        ulSea.appendChild(searchli)
+                   
+                    ulSea.appendChild(searchli)
+
+                    divSea.appendChild(ulSea)
+                    divSea.appendChild(ulSea)
+                    divSea.appendChild(ulSea)
+                        
+                    if(contacts.name === task.name || contacts.fulname ===task.fulname){ 
+                        
+
+                          
+                       return filterdData
+
+                } 
+                
+
+                })
+
+                    
+                  })
+                }
+
+
+            </script>
+        </body>
+   
+</html>

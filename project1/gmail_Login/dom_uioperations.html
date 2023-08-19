@@ -1,0 +1,95 @@
+<html>
+<head>
+<body>
+    <input type="text" id="dd">
+    <input type="text" id="d1">
+    <button onclick="add()">Add</button>
+    <table >
+        <thead>
+            <tr >
+                <th>Person</th>
+                 <th>Age</th>
+            </tr>
+            
+        </thead>
+
+       <tbody id="table">
+
+       </tbody>
+
+    </table>
+
+<script>
+
+var inp = document.getElementById('dd')
+var inp1 = document.getElementById('d1')
+var tab = document.getElementById('table')
+
+var people = [];
+
+function add(){
+    
+    var peopleobj = {
+        'personName': '',
+        'personAge':'' 
+    }
+    peopleobj.personName=dd.value;
+    peopleobj.personAge=d1.value;
+    people.push(peopleobj)
+    
+    
+    people.forEach(function(task){
+
+        tab.innerHTML = '';
+        
+        var trow = document.createElement('tr');
+        var td1 = document.createElement('td');
+        var td2 = document.createElement('td');
+
+        td1.innerHTML = task.personName;
+        td2.innerHTML = task.personAge;
+
+        trow.appendChild(td1);
+        trow.appendChild(td2);
+        tab.appendChild(trow);
+        
+})
+
+}
+
+
+
+
+
+
+
+/* var inpEle = document.getElementById("dd");
+var t1 = document.getElementById('ulList')
+var card = []
+
+function additem() {
+    card.push(inpEle.value)
+    t1.innerHTML =''
+    card.forEach(function(value){
+        var li = document.createElement('li')
+        li.innerHTML = value;
+        t1.appendChild(li)
+
+    })
+
+
+}
+
+*/
+
+
+
+
+</script>
+
+
+
+
+</body>
+</head>
+</html>

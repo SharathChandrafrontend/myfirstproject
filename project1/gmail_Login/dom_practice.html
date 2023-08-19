@@ -1,0 +1,193 @@
+<html>
+    <head>
+        <body>
+            <h1 id="h1"></h1>
+
+            <ul id="ulli">
+
+            </ul>
+            <div id="dd">
+
+            </div>
+            <div id="dd1">
+
+            </div>
+           
+            <input type="text" id="inpid"> 
+           
+            
+            <button onclick="add()">add</button>
+
+            <ul id="dd2">
+
+            </ul>
+        
+            <script>
+                /*
+
+                //Create one h1 element,put some text into it and apply red font color to
+
+                var h1ele = document.getElementById('h1')
+            
+                
+                h1ele.innerHTML = 'Hello world'
+                h1ele.style.color = 'Red';
+                document.body.appendChild(h1ele)
+
+                // Take an array of names and create a list from it.
+
+                var ar = ['sharath','chandra','raj']
+                var ulList = document.getElementById('ulli')
+
+                ar.forEach(function(value){
+
+                    console.log(value)
+                    
+                    var li = document.createElement('li');
+                    li.innerHTML = value
+                   
+                    ulList.appendChild(li)
+                })
+
+                // Take an array of numbers and create a list from it.
+
+                var arr = [11,12,13,14,15,16,17]
+
+                var ulList = document.getElementById('ulli')
+
+                arr.forEach(function(value){
+                    var Li = document.createElement('li')
+                    Li.innerHTML = value;
+                    ulList.appendChild(Li)
+                })
+
+                // Take an array of objects and create a table form it.
+                
+
+
+                //Generate List Elements using document object for the given Array of Objects
+                
+                var students = [
+                                {
+                                name:'jaya',
+                                gender:'female',
+                                place:'gachibowli',
+                                },
+                                {
+                                name:'dasu',
+                                gender:'male',
+                                place:'kphb'
+                                },
+                                {
+                                name:'swati',
+                                gender:'female',
+                                place:'pune'
+                                },
+                                {
+                                name:'pallavi',
+                                gender:'female',
+                                place:'assam'
+                                },
+                                {
+                                name:'kiran',
+                                gender:'male',
+                                place:'kondapur'
+                                },
+                                {
+                                name:'thirumala',
+                                gender:'male',
+                                place:'madhapur'
+                                },
+                                {
+                                name:'priya',
+                                gender:'female',
+                                place:'hitech'
+                                },
+                            ]
+                
+                 
+
+                students.forEach(function(value){
+
+                    console.log(value)
+                    var ulobj = document.getElementById('ul');
+                    var liobj = document.createElement('li')
+                     liobj.innerHTML = value.name
+                    ulobj1.appendChild(liobj)
+                  
+
+                    var ulobj1 = document.createElement('ul')
+                    var liobj1 = document.createElement('li')
+                    liobj1.innerHTML = value.gender;
+                    liobj1.innerHTML = value.place;
+                    ulobj1.appendChild(liobj1);
+                    ulobj1.appendChild(liobj1);
+
+                })
+               
+                var arr = ['Sharath','Raj','Chandra','vinay']
+                var a = document.getElementById('dd');
+                arr.forEach(function(value,i){
+              
+                    var b = document.createElement('button')
+                   
+                    b.innerHTML = value;
+                    b.onclick = function (){alert(value)}
+                    a.appendChild(b)
+                })
+
+                for(var j=0; j<=arr.length-1;j++){
+                    var c = document.getElementById('dd1')
+                    var d = document.createElement('button')
+                 
+                    d.innerHTML = arr[j]
+                    d.onclick = function(){alert('Hello' + j)}
+                    c.appendChild(d)
+                    console.log(j)
+                }
+                j=2;
+
+                
+                var err = [function (){console.log(i);i++},]
+                
+                err[0]();
+
+                 */
+
+                var array = []
+
+                function add(){
+                var a = document.getElementById('inpid') 
+                array.push(a.value)
+                var x = document.getElementById('dd2')
+                x.innerHTML = ''
+                array.forEach(function(value){
+                  
+                    
+                    var y = document.createElement('li')
+                    var btn = document.createElement('button')
+                     y.innerHTML = value 
+                     btn.innerHTML = 'del' 
+                    btn.onclick = function(value,i){
+                        alert(JSON.stringify(array))
+                        array.splice(0,1)
+                    }
+                    x.appendChild(y)
+                    x.appendChild(btn)
+                })
+
+                
+            }
+
+
+
+
+
+
+
+
+            </script>
+
+        </body>
+    </head>
+</html>

@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <style>
+            #iddiv1 {
+
+                border:black 1px 
+            }
+        </style>
+    </head>
+    <body>
+        <label for="dd">Enter your Name</label>
+        <br>
+        <input type="text" id="dd">
+
+        <br>
+        <label for="dd1">Enter your Age</label>
+        <br>
+        <input type="text" id="dd1">
+        <br>
+        <label for="dd2">Enter your City</label>
+        <br>
+        <input type="text" id="dd2">
+        <br>
+        <button onclick="addGet()"> Submit</button>
+
+        <div id="iddiv" >
+            
+
+        </div>
+        <script>
+
+        var ar = []
+
+            function addGet(){
+
+                var inp1 = document.getElementById('dd').value
+                var inp2 = document.getElementById('dd1').value
+                var inp3 = document.getElementById('dd2').value
+                var inpdiv1 = document.createElement('dd3')
+                var obj = {name: "",
+                age:"",
+                city:""
+
+                }
+
+                    obj.name =  inp1
+                    obj.age = inp2
+                    obj.city = inp3
+
+                     ar.push(obj)
+                    
+                    ar.forEach(function (val){
+
+                        val.innerHTML = " "
+                        console.log(val)
+                        
+                        var inpdiv = document.getElementById('iddiv')
+                        
+                        var valname = document.createElement('h5')
+                       
+                        
+                        var valage = document.createElement('p')
+                        
+                        var valcity = document.createElement('p')
+                        console.log(val.name)
+
+                        valname.innerHTML  = val.name
+                        valage.innerHTML  = val.age
+                        valcity.innerHTML  = val.city
+                        
+                        inpdiv1.appendChild(valname);
+                        inpdiv1.appendChild(valage);
+                        inpdiv1.appendChild(valcity);
+
+                        inpdiv.appendChild(inpdiv1)
+
+                       
+
+
+                      
+                        
+                       
+
+                    
+                     
+
+                        
+
+
+                    })
+                 
+
+                }
+
+
+</script>
+</body>
+</html> 
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
