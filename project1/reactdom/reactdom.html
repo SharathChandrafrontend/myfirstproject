@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    </head>
+
+    <body>
+        
+        <h1>This is HTML Element</h1>
+        <div id="dd">
+      </div>
+      <div id="dd1">
+    </div>
+    <div id="dd2">
+    </div>
+        <script type="text/babel" >
+
+             
+             var x = document.createElement('h1');
+             x.innerHTML = "This Dom Element"
+             var y = document.getElementById('dd').appendChild(x);
+
+             var z = React.createElement("h1", null ,'This is React Element')
+
+             ReactDOM.render(z,document.getElementById('dd2'))
+             
+
+
+        </script>
+    </body>
+</html>
