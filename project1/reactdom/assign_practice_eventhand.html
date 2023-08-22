@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="dd"></div>
+        <script type="text/babel">
+           // var btn = <button onClick= {()=>{abc()}}> Click</button>
+           // ReactDOM.render(btn,document.getElementById('dd'))
+           // function abc() {
+             //   console.log(alert("Hello Sharath"))
+            // }
+            var i = 0
+            function Inc(){
+                i++
+                abc()
+            }
+            function Dec(){
+                i--
+                abc()
+            }
+            
+            function abc(){
+                var divele = <div>
+            
+                 <h1>{i} </h1>
+                <button onClick={()=>{Inc()}}>Inc</button>
+
+                <button onClick={()=>{Dec()}}>Dec</button>
+                </div>
+            ReactDOM.render(divele,document.getElementById("dd"))
+            }
+            abc()
+        </script>
+    </body>
+</html>
